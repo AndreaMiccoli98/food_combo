@@ -1,10 +1,9 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -14,7 +13,21 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    colors: {
+      'red-logo': '#fc2636',
+      'white': '#ffffff',
+      'black': '#000000',
+      'gray': '#808080',
+      'red' : '#ff0000',
+      'blue_mui': '#1976D2',
+      'red_mui': '#D32F2F',
+    },
+    fontFamily: {
+      'menulis': ['menulis', 'sans-serif'],
+    }
   },
   plugins: [],
+  // corePlugins: {
+  //   preflight: false,
+  // }
 }
-export default config
